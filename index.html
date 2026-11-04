@@ -1,13 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch2Build Week 3 Assignment</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Activity Portal</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
- 
-<script src="script.js"></script>
+
+    <header>
+        <h1>EventHub</h1>
+        <p>Discover and create campus events</p>
+    </header>
+
+    <main>
+
+        <section class="form-section">
+            <h2>Create New Event</h2>
+
+            <form id="event-form">
+
+                <input
+                    type="text"
+                    id="title-input"
+                    placeholder="Enter event title"
+                >
+
+                <select id="category-input">
+                    <option value="">Choose Category</option>
+                    <option value="tech">Tech</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="social">Social</option>
+                </select>
+
+                <button type="submit">Add Event</button>
+
+                <p id="form-message"></p>
+
+            </form>
+        </section>
+
+
+        <section class="events-section">
+
+            <h2>Explore Events</h2>
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search events..."
+                >
+
+                <select id="category-select">
+                    <option value="all">All Categories</option>
+                    <option value="tech">Tech</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="social">Social</option>
+                </select>
+
+            </div>
+
+            <p id="active-counter">Showing 4 Events</p>
+
+            <div id="events-container">
+
+                <div class="event-card" data-category="tech">
+
+                    <span class="badge tech">Tech</span>
+
+                    <h3 class="card-title">
+                        Web Development
+                    </h3>
+
+                    <p>Learn HTML, CSS and JavaScript.</p>
+
+                    <button class="btn-delete">Delete</button>
+
+                </div>
+
+
+                <div class="event-card" data-category="workshop">
+
+                    <span class="badge workshop">Workshop</span>
+
+                    <h3 class="card-title">
+                        UI/UX Design
+                    </h3>
+
+                    <p>Learn the basics of user interface design.</p>
+
+                    <button class="btn-delete">Delete</button>
+
+                </div>
+
+
+                <div class="event-card" data-category="social">
+
+                    <span class="badge social">Social</span>
+
+                    <h3 class="card-title">
+                        Game Night
+                    </h3>
+
+                    <p>Enjoy games with your friends.</p>
+
+                    <button class="btn-delete">Delete</button>
+
+                </div>
+
+
+                <div class="event-card" data-category="tech">
+
+                    <span class="badge tech">Tech</span>
+
+                    <h3 class="card-title">
+                        Artificial Intelligence
+                    </h3>
+
+                    <p>Discover the world of AI.</p>
+
+                    <button class="btn-delete">Delete</button>
+
+                </div>
+
+            </div>
+
+            <p id="empty-state" hidden>
+                No events found.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>FCAI E-CLUB | Scratch2Build</p>
+    </footer>
+
 </body>
 </html>
