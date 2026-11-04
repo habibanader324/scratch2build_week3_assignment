@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #222;
+}
+
+header {
+    background-color: #5941ce;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+.form-section,
+.events-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5941ce;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #402ba9;
+}
+
+#form-message {
+    color: red;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input {
+    flex: 1;
+}
+
+#active-counter {
+    margin-bottom: 20px;
+    color: #5941ce;
+    font-weight: bold;
+}
+
+#events-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.event-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.card-title {
+    margin: 15px 0;
+}
+
+.event-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tech {
+    background-color: #dce8ff;
+    color: #2454a6;
+}
+
+.workshop {
+    background-color: #fff0d5;
+    color: #a36a00;
+}
+
+.social {
+    background-color: #d9f5e5;
+    color: #237747;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    padding: 8px 15px;
+}
+
+.btn-delete:hover {
+    background-color: #b52a37;
+}
+
+#empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+#empty-state[hidden] {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    #events-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+}
